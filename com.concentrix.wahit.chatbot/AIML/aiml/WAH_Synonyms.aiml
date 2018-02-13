@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+  
+  <!--Synonyms-->
+  <category>
+    <pattern>FULL NAME</pattern>
+    <template>
+      <srai>NAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FULL NAME *</pattern>
+    <template>
+      <srai>NAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FULL NAME</pattern>
+    <template>
+      <srai>NAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FULL NAME *</pattern>
+    <template>
+      <srai>NAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FULLNAME</pattern>
+    <template>
+      <srai>NAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FULLNAME *</pattern>
+    <template>
+      <srai>NAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FULLNAME</pattern>
+    <template>
+      <srai>NAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FULLNAME *</pattern>
+    <template>
+      <srai>NAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FIRST NAME</pattern>
+    <template>
+      <srai>FIRSTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FIRST NAME *</pattern>
+    <template>
+      <srai>FIRSTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FIRST NAME</pattern>
+    <template>
+      <srai>FIRSTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FIRST NAME *</pattern>
+    <template>
+      <srai>FIRSTNAME</srai>
+    </template>
+  </category>
+    <category>
+    <pattern>* FIRSTNAME *</pattern>
+    <template>
+      <srai>FIRSTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FIRSTNAME</pattern>
+    <template>
+      <srai>FIRSTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FIRSTNAME *</pattern>
+    <template>
+      <srai>FIRSTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LAST NAME</pattern>
+    <template>
+      <srai>LASTNAME</srai>
+    </template>
+  </category>
+    <category>
+    <pattern>* LAST NAME *</pattern>
+    <template>
+      <srai>LASTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LAST NAME</pattern>
+    <template>
+      <srai>LASTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LAST NAME *</pattern>
+    <template>
+      <srai>LASTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LASTNAME *</pattern>
+    <template>
+      <srai>LASTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LASTNAME</pattern>
+    <template>
+      <srai>LASTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LASTNAME *</pattern>
+    <template>
+      <srai>LASTNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>USER NAME</pattern>
+    <template>
+      <srai>USERNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* USER NAME *</pattern>
+    <template>
+      <srai>USERNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* USER NAME</pattern>
+    <template>
+      <srai>USERNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>USER NAME *</pattern>
+    <template>
+      <srai>USERNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* USERNAME *</pattern>
+    <template>
+      <srai>USERNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* USERNAME</pattern>
+    <template>
+      <srai>USERNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* USERNAME</pattern>
+    <template>
+      <srai>USERNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NUMBER</pattern>
+    <template>
+      <srai>PHONE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NUMBERS</pattern>
+    <template>
+      <srai>PHONE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PHONE *</pattern>
+    <template>
+      <srai>PHONE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PHONE</pattern>
+    <template>
+      <srai>PHONE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PHONE *</pattern>
+    <template>
+      <srai>PHONE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WORKPHONE</pattern>
+    <template>
+      <srai>WORK PHONE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* WORKPHONE *</pattern>
+    <template>
+      <srai>WORK PHONE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* WORKPHONE</pattern>
+    <template>
+      <srai>WORK PHONE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WORKPHONE *</pattern>
+    <template>
+      <srai>WORK PHONE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ALTERNATE *</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ALTERNATE</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ALTERNATE *</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CELL</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CELL *</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CELL</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CELL *</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CELLPHONE</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CELLPHONE *</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CELLPHONE</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CELLPHONE *</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MOBILE</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MOBILE *</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MOBILE</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MOBILE *</pattern>
+    <template>
+      <srai>ALTERNATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>E-MAIL</pattern>
+    <template>
+      <srai>EMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EMAIL *</pattern>
+    <template>
+      <srai>EMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EMAIL *</pattern>
+    <template>
+      <srai>EMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EMAIL</pattern>
+    <template>
+      <srai>EMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONCENTRIX</pattern>
+    <template>
+      <srai>CNXMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CONCENTRIX *</pattern>
+    <template>
+      <srai>CNXMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CONCENTRIX</pattern>
+    <template>
+      <srai>CNXMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONCENTRIX *</pattern>
+    <template>
+      <srai>CNXMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CNX</pattern>
+    <template>
+      <srai>CNXMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CNX *</pattern>
+    <template>
+      <srai>CNXMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CNX</pattern>
+    <template>
+      <srai>CNXMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CNX *</pattern>
+    <template>
+      <srai>CNXMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ZIMBRA *</pattern>
+    <template>
+      <srai>ZIMBRA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ZIMBRA</pattern>
+    <template>
+      <srai>ZIMBRA</srai>
+    </template>
+  </category>
+    <category>
+    <pattern>ZIMBRA *</pattern>
+    <template>
+      <srai>ZIMBRA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* GREENVILLE *</pattern>
+    <template>
+      <srai>GREENVILLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* GREENVILLE</pattern>
+    <template>
+      <srai>GREENVILLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GREENVILLE *</pattern>
+    <template>
+      <srai>GREENVILLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PHOENIX *</pattern>
+    <template>
+      <srai>PHOENIX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PHOENIX</pattern>
+    <template>
+      <srai>PHOENIX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PHOENIX *</pattern>
+    <template>
+      <srai>PHOENIX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* INTUIT *</pattern>
+    <template>
+      <srai>INTUIT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* INTUIT</pattern>
+    <template>
+      <srai>INTUIT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>INTUIT *</pattern>
+    <template>
+      <srai>INTUIT</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>FORTICLIENT</pattern>
+    <template>
+      <srai>VPN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ FORTICLIENT _</pattern>
+    <template>
+      <srai>VPN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ FORTICLIENT</pattern>
+    <template>
+      <srai>VPN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FORTICLIENT _</pattern>
+    <template>
+      <srai>VPN</srai>
+    </template>
+  </category>
+  
+
+  <category>
+    <pattern>* DATE *</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DATE</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DATE *</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DAY</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+    <category>
+    <pattern>TODAY</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TIME</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TIME *</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TIME</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TIME *</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  
+<!--VPN SYNONYMS-->
+<topic name="VPN">
+<!--topic can't connect-->
+		<category>
+			<pattern>_ CONNECT _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+		<category>
+			<pattern>_ CONNECT</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+		<category>
+			<pattern>CONNECT _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>LOGIN</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>_ LOGIN _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+		<category>
+			<pattern>_ LOGIN</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+		<category>
+			<pattern>LOGIN _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+		<category>
+			<pattern>LOG-IN</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+		<category>
+			<pattern>_ LOG-IN _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+		<category>
+			<pattern>_ LOG-IN</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>LOG-IN _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>LOG IN</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>_ LOG IN _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>_ LOG IN</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>LOG IN _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>SIGN-IN</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>_ SIGN-IN _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>_ SIGN-IN</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>	
+		<category>
+			<pattern>SIGN-IN _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>			
+		<category>
+			<pattern>SIGN IN</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+		<category>
+			<pattern>_ SIGN IN _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+		<category>
+			<pattern>_ SIGN IN</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+		<category>
+			<pattern>SIGN IN _</pattern>
+			<template><srai>CONNECT</srai></template>
+		</category>
+
+<!--topic SSL Certificate-->	
+		<category>
+			<pattern>INSUFFICIENT</pattern>
+			<template>
+			<think><set name="topic">connect</set></think>
+			Kindly open Keychain Access in Applications folder and click Certificates. Do you see <get name="fullname"/>? If Yes, please delete it and download a new SSL certificate at https://wah-ca.concentrix.com. Do you need help to <set name="topic">import</set> it back to Keychain Access?
+      </template>
+		</category>
+		<category>
+			<pattern>_ INSUFFICIENT _</pattern>
+			<template><srai>INSUFFICIENT</srai></template>
+		</category>
+		<category>
+			<pattern>_ INSUFFICIENT</pattern>
+			<template><srai>INSUFFICIENT</srai></template>
+		</category>
+		<category>
+			<pattern>INSUFFICIENT _</pattern>
+			<template><srai>INSUFFICIENT</srai></template>
+		</category>
+		<category>
+			<pattern>INSUFFICIENT CREDENTIALS</pattern>
+			<template><srai>INSUFFICIENT</srai></template>
+		</category>
+		<category>
+			<pattern>_ INSUFFICIENT CREDENTIALS _</pattern>
+			<template><srai>INSUFFICIENT</srai></template>
+		</category>
+		<category>
+			<pattern>_ INSUFFICIENT CREDENTIALS</pattern>
+			<template><srai>INSUFFICIENT</srai></template>
+		</category>
+		<category>
+			<pattern>INSUFFICIENT CREDENTIALS _</pattern>
+			<template><srai>INSUFFICIENT</srai></template>
+		</category>
+		<category>
+			<pattern>CREDENTIAL</pattern>
+			<template><think><set name="topic">connect</set></think>Please verify your username, it should be <get name="username"/> and the password should be the same as your SSO/Zimbra. Did the error message disappeared? Yes/No?</template>
+		</category>
+		<category>
+			<pattern>_ CREDENTIAL _</pattern>
+			<template><srai>CREDENTIAL</srai></template>
+		</category>
+		<category>
+			<pattern>_ CREDENTIAL</pattern>
+			<template><srai>CREDENTIAL</srai></template>
+		</category>
+		<category>
+			<pattern>CREDENTIAL _</pattern>
+			<template><srai>CREDENTIAL</srai></template>
+		</category>
+		<category>
+			<pattern>CREDENTIALS</pattern>
+			<template><srai>CREDENTIAL</srai></template>
+		</category>
+		<category>
+			<pattern>_ CREDENTIALS _</pattern>
+			<template><srai>CREDENTIAL</srai></template>
+		</category>
+		<category>
+			<pattern>_ CREDENTIALS</pattern>
+			<template><srai>CREDENTIAL</srai></template>
+		</category>
+		<category>
+			<pattern>CREDENTIALS _</pattern>
+			<template><srai>CREDENTIAL</srai></template>
+		</category>
+<!--topic dropping-->	
+		<category>
+			<pattern>_ DROPPING</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		<category>
+			<pattern>DROPPING _</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		<category>
+			<pattern>_ DROPS _</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		<category>
+			<pattern>_ DROPS</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		<category>
+			<pattern>DROPS _</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		<category>
+			<pattern>_ DISCONNECTS _</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		<category>
+			<pattern>_ DISCONNECTS</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		<category>
+			<pattern>DISCONNECTS _</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		<category>
+			<pattern>_ DISCONNECTING _</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		<category>
+			<pattern>_ DISCONNECTS</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		<category>
+			<pattern>DISCONNECTS _</pattern>
+			<template><srai>DROPPING</srai></template>
+		</category>
+		
+<!--topic slow connection-->
+
+</topic>
+
+</aiml>

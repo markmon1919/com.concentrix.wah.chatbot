@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<aiml>
+<!--VPN Topic-->
+<topic name="VPN">
+		<category>
+			<pattern>_ VPN * _</pattern>
+			<template>
+			<think><set name="topic"><star index="1"/></set></think>
+			<condition name="topic">
+				<li value="connect">Please verify your username, it should be <get name="username"/> and the password should be the same as your SSO/Zimbra. Can you login now? Yes/No?</li>
+				<li value="dropping">Check your FortiClient version. The latest version is 5.6.0.703... Is it up to date?</li>
+				<li value="slow">Is your Download speed less than 5.0 Mbps and Upload speed less than 1.5Mbps?</li>
+			</condition>
+			</template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<template>What is the issue with your VPN?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern><template><srai>YES</srai>
+			</template>
+		</category>
+		<category>
+			<pattern>CONNECT</pattern>
+			<template><think><set name="topic">connect</set></think>Please verify your username, it should be <get name="username"/> and the password should be the same as your SSO/Zimbra. Can you login now? Yes/No?</template>
+		</category>	
+		<category>
+			<pattern>DROPPING</pattern>
+			<template><think><set name="topic">dropping</set></think>Check your FortiClient version. The latest version is 5.6.0.703... Is it up to date?</template>
+		</category>
+		<category>
+			<pattern>SLOW</pattern>
+			<template><think><set name="topic">slow</set></think>Is your Download speed less than 5.0 Mbps and Upload speed less than 1.5Mbps?</template>
+		</category>
+</topic>
+<!--can't connect to VPN -->
+<topic name="connect">
+		<category>
+			<pattern>YES</pattern>
+			<template>Great job <get name="firstname"/>!</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<template>
+        Please double check your Remote Gateway. For Greenville it's 216.85.164.129 or https://wah20101647.concentrix.com, for Phoenix it's 209.136.238.37 and for Intuit it's https://wah0941.concentrix.com.. Is your configuration correct?
+      </template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>Please verify your *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<that>Please verify your *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<that>Please verify your *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<that>Please double check *</that>
+			<template>
+			Kindly open Keychain Access in Applications folder and click Certificates. Do you see <get name="fullname"/>? If Yes, please delete it and download a new SSL certificate at https://wah-ca.concentrix.com. Do you need help to <set name="topic">import</set> it back to Keychain Access?
+      </template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>Please double check *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>Please double check *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>Please double check *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<that>Please double check *</that>
+			<template>
+			Please change your Remote Gateway to the correct one. For Greenville it's 216.85.164.129 or https://wah20101647.concentrix.com, for Phoenix it's 209.136.238.37 and for Intuit it's https://wah0941.concentrix.com.. Can you login now? Yes/No?
+      </template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>Please double check *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<that>Please double check *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<that>Please double check *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<that>* your Remote Gateway *</that>
+			<template>Good work <get name="firstname"/>!</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>* your Remote Gateway *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>* your Remote Gateway *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>* your Remote Gateway *</that>
+			<template><srai>YES</srai></template>
+		</category>
+			<category>
+			<pattern>NO</pattern>
+			<that>* your Remote Gateway *</that>
+			<template>Kindly open Keychain Access in Applications folder and click Certificates. Do you see <get name="fullname"/>? If Yes, please delete it and download a new SSL certificate at https://wah-ca.concentrix.com. Do you need help to <set name="topic">import</set> it back to Keychain Access?</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>* your Remote Gateway *</that>
+			<template><srai>NO</srai></template>
+		</category>		
+		<category>
+			<pattern>_ NO</pattern>
+			<that>* your Remote Gateway *</that>
+			<template><srai>NO</srai></template>
+		</category>	
+		<category>
+			<pattern>NO _</pattern>
+			<that>* your Remote Gateway *</that>
+			<template><srai>NO</srai></template>
+		</category>				
+</topic>
+<!-- VPN Dropping  -->
+<topic name="dropping">
+<!-- check internet speed -->
+		<category>
+			<pattern>YES</pattern>
+			<template>Is your Download speed less than 5.0 Mbps and Upload speed less than 1.5Mbps?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<template>Please run Self-Service, update your FortiClient and try logging-in again. Is it still dropping?</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<that>Please run *</that>
+			<pattern>YES</pattern>
+			<template>Is your Download speed less than 5.0 Mbps and Upload speed less than 1.5Mbps?</template>
+		</category>
+		<category>
+			<that>Please run *</that>
+			<pattern>_ YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<that>Please run *</that>
+			<pattern>_ YES</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<that>Please run *</that>
+			<pattern>YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<that>Please run *</that>
+			<pattern>NO</pattern>
+			<template>Great work there <get name="firstname"/>! Is there anything else you want me to help you with?</template>
+		</category>
+		<category>
+			<that>Please run *</that>
+			<pattern>_ NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<that>Please run *</that>
+			<pattern>_ NO</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<that>Please run *</that>
+			<pattern>NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>HOW</pattern>
+			<template>To check your Forticlient Version: Open Finder and go to Applications Folder. Right click on Forticlient.app Click Get Info. On General you can see the version of the application. Is it updated?</template>
+		</category>
+		<category>
+			<pattern>_ HOW _</pattern>
+			<template><srai>HOW</srai></template>
+		</category>
+		<category>
+			<pattern>_ HOW</pattern>
+			<template><srai>HOW</srai></template>
+		</category>
+		<category>
+			<pattern>HOW _</pattern>
+			<template><srai>HOW</srai></template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<that>Is your Download speed *</that>
+			<template>Please coordinate with your ISP on upgrading your internet speed to meet the requirements. Is there anything else you want me to help you with?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>Is your Download speed *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>Is your Download speed *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>Is your Download speed *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<that>Is your Download speed *</that>
+			<template>I see.. I will forward your concern to helpdesk or you may call our hotline on this #844-526-6471. Is there anything else you want me to help you with?</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>Is your Download speed *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<that>Is your Download speed *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<that>Is your Download speed *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>HOW</pattern>
+			<that>Is your Download speed *</that>
+			<template>Do you mean how to check the speed of your internet connection?</template>
+		</category>
+		<category>
+			<pattern>_ HOW _</pattern>
+			<that>Is your Download speed *</that>
+			<template><srai>HOW</srai></template>
+		</category>
+		<category>
+			<pattern>_ HOW</pattern>
+			<that>Is your Download speed *</that>
+			<template><srai>HOW</srai></template>
+		</category>
+		<category>
+			<pattern>HOW _</pattern>
+			<that>Is your Download speed *</that>
+			<template><srai>HOW</srai></template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<that>* check the speed *</that>
+			<template>Go to speedtest.net to check your internet speed. Is your Download speed less than 5.0 Mbps and Upload speed less than 1.5Mbps?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>* check the speed *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>* check the speed *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>* check the speed *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<that>* check the speed *</that>
+			<template>What do you mean?</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>* check the speed *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<that>* check the speed *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<that>* check the speed *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_</pattern>
+			<that>What do you *</that>
+			<template>I'm going to ask you again. Do you mean how to check the speed of your internet connection?</template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<that>* going to ask *</that>
+			<template>Go to speedtest.net to check your internet speed. Is your Download speed less than 5.0 Mbps and Upload speed less than 1.5Mbps?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>* going to ask *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>* going to ask *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>* going to ask *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<that>* going to ask *</that>
+			<template>Never mind.. You can go to speedtest.net to check your internet speed. Is your Download speed less than 5.0 Mbps and Upload speed less than 1.5Mbps?</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>* going to ask *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<that>* going to ask *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<that>* going to ask *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>YES</pattern>
+			<template>Please coordinate with your ISP on upgrading your internet speed to meet the requirements. Is there anything else you want me to help you with?</template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>_ YES _</pattern>
+			<template><srai>YES</srai></template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>_ YES</pattern>
+			<template><srai>YES</srai></template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>YES _</pattern>
+			<template><srai>YES</srai></template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>NO</pattern>
+			<template>I see.. I will forward your concern to helpdesk or you may call our hotline on this #844-526-6471. Is there anything else you want me to help you with?</template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>_ NO _</pattern>
+			<template><srai>NO</srai></template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>_ NO</pattern>
+			<template><srai>NO</srai></template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>NO _</pattern>
+			<template><srai>NO</srai></template>				
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>YES</pattern>
+			<template>What is it <get name="firstname"/>?</template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>_ YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>_ YES</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>NO</pattern>
+			<template>Thank you <get name="firstname"/> and have a good day!</template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>_ NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>_ NO</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+	<!--DO THIS LATER-->
+		<category>
+			<that>* there anything else *</that>
+			<pattern>_</pattern>
+			<template>***AIML TOPIC IS STILL UNDER CONSTRUCTION***</template>
+		</category>
+	<!--DO THIS LATER-->
+</topic>
+<!-- VPN slow connection -->
+<topic name="slow">
+		<category>
+			<pattern>YES</pattern>
+			<template>Please coordinate with your ISP on upgrading your internet speed to meet the requirements. Is there anything else you want me to help you with?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<template>I see.. I will forward your concern to helpdesk or you may call our hotline on this #844-526-6471. Is there anything else you want me to help you with?</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>HOW</pattern>
+			<template>Do you mean how to check the speed of your internet connection?</template>
+		</category>
+		<category>
+			<pattern>_ HOW _</pattern>
+			<template><srai>HOW</srai></template>
+		</category>
+		<category>
+			<pattern>_ HOW</pattern>
+			<template><srai>HOW</srai></template>
+		</category>
+		<category>
+			<pattern>HOW _</pattern>
+			<template><srai>HOW</srai></template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<that>* check the speed *</that>
+			<template>Go to speedtest.net to check your internet speed. Is your Download speed less than 5.0 Mbps and Upload speed less than 1.5Mbps?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>* check the speed *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>* check the speed *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>* check the speed *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<that>* check the speed *</that>
+			<template>What do you mean?</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>* check the speed *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<that>* check the speed *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<that>* check the speed *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_</pattern>
+			<that>What do you *</that>
+			<template>I'm going to ask you again. Do you mean how to check the speed of your internet connection?</template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<that>* going to ask *</that>
+			<template>Go to speedtest.net to check your internet speed. Is your Download speed less than 5.0 Mbps and Upload speed less than 1.5Mbps?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>* going to ask *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>* going to ask *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>* going to ask *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<that>* going to ask *</that>
+			<template>Never mind.. You can go to speedtest.net to check your internet speed. Is your Download speed less than 5.0 Mbps and Upload speed less than 1.5Mbps?</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>* going to ask *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<that>* going to ask *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<that>* going to ask *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>YES</pattern>
+			<template>Please coordinate with your ISP on upgrading your internet speed to meet the requirements. Is there anything else you want me to help you with?</template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>_ YES _</pattern>
+			<template><srai>YES</srai></template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>_ YES</pattern>
+			<template><srai>YES</srai></template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>YES _</pattern>
+			<template><srai>YES</srai></template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>NO</pattern>
+			<template>I see.. I will forward your concern to helpdesk or you may call our hotline on this #844-526-6471. Is there anything else you want me to help you with?</template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>_ NO _</pattern>
+			<template><srai>NO</srai></template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>_ NO</pattern>
+			<template><srai>NO</srai></template>				
+		</category>
+		<category>
+			<that>* to check your internet *</that>
+			<pattern>NO _</pattern>
+			<template><srai>NO</srai></template>				
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>YES</pattern>
+			<template>What is it <get name="firstname"/>?</template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>_ YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>_ YES</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>NO</pattern>
+			<template>Thank you <get name="firstname"/> and have a good day!</template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>_ NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>_ NO</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<that>* there anything else *</that>
+			<pattern>NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+	<!--DO THIS LATER-->
+		<category>
+			<that>* there anything else *</that>
+			<pattern>_</pattern>
+			<template>***AIML TOPIC IS STILL UNDER CONSTRUCTION***</template>
+		</category>
+	<!--DO THIS LATER-->
+</topic>
+<!-- SSL Certificate -->
+<topic name="import">
+		<category>
+			<pattern>YES</pattern>
+			<template>On Keychain Access window click on File then Import Items... Select your certificate on the Downloads folder and click Open. Can you login now? Yes/No?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<template>Okay do it yourself. When your done, please tell me if you can login? Can you login now? Yes/No?</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<that>On Keychain Access *</that>
+			<template>Great work there <get name="firstname"/>!</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>On Keychain Access *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>On Keychain Access *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>On Keychain Access *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<that>On Keychain Access *</that>
+			<template>Have you tried running Self-service? "VPN is not connecting". Let me know if it worked.</template>
+		</category>
+		<category>
+			<pattern>)_ NO _</pattern>
+			<that>On Keychain Access *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>)_ NO</pattern>
+			<that>On Keychain Access *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<that>On Keychain Access *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<that>Have you tried *</that>
+			<template>Is there anything else I can help you <get name="firstname"/>?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>Have you tried *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>Have you tried *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>Have you tried *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<that>Have you tried *</that>
+			<template>I see.. I will forward your concern to helpdesk or you may call our hotline on this #844-526-6471. Is there anything else you want me to help you with?</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>Have you tried *</that>
+			<template><srai>NO</srai></template>
+		</category>	
+		<category>
+			<pattern>_ NO</pattern>
+			<that>Have you tried *</that>
+			<template><srai>NO</srai></template>
+		</category>	
+		<category>
+			<pattern>NO _</pattern>
+			<that>Have you tried *</that>
+			<template><srai>NO</srai></template>
+		</category>		
+		<category>
+			<pattern>YES</pattern>
+			<that>Okay do it *</that>
+			<template>Great work <get name="firstname"/></template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>Okay do it *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>Okay do it *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>Okay do it *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<that>Okay do it *</that>
+			<template>Have you tried running Self-service? "VPN is not connecting". Let me know if it worked.</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>Okay do it *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<that>Okay do it *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<that>Okay do it *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>YES</pattern>
+			<that>Is there anything *</that>
+			<template>What is it <get name="firstname"/>?</template>
+		</category>
+		<category>
+			<pattern>_ YES _</pattern>
+			<that>Is there anything *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>_ YES</pattern>
+			<that>Is there anything *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>YES _</pattern>
+			<that>Is there anything *</that>
+			<template><srai>YES</srai></template>
+		</category>
+		<category>
+			<pattern>NO</pattern>
+			<that>Is there anything *</that>
+			<template>Thank you <get name="firstname"/> and have a good day!</template>
+		</category>
+		<category>
+			<pattern>_ NO _</pattern>
+			<that>Is there anything *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>_ NO</pattern>
+			<that>Is there anything *</that>
+			<template><srai>NO</srai></template>
+		</category>
+		<category>
+			<pattern>NO _</pattern>
+			<that>Is there anything *</that>
+			<template><srai>NO</srai></template>
+		</category>
+	<!--DO THIS LATER-->
+		<category>
+			<that>What is it *</that>
+			<pattern>_</pattern>
+			<template>***AIML TOPIC IS STILL UNDER CONSTRUCTION***</template>
+		</category>
+	<!--DO THIS LATER-->
+</topic>
+</aiml>

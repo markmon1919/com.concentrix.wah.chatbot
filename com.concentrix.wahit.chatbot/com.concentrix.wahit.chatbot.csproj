@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33779877-3986-43DB-B5C2-3097D9C79C68}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>com.concentrix.wahit.chatbot</RootNamespace>
+    <AssemblyName>com.concentrix.wahit.chatbot</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>2</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="agsXMPP, Version=1.1.1.0, Culture=neutral, PublicKeyToken=ff839b81f1debe86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\agsXMPP.dll</HintPath>
+    </Reference>
+    <Reference Include="AIMLbot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\AIMLbot.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AIMLChatBot.cs" />
+    <Compile Include="CommonManager.cs" />
+    <Compile Include="Configuration\BotConfigSection.cs" />
+    <Compile Include="GetAttribute.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="AIML\aiml\AI.aiml" />
+    <None Include="AIML\aiml\Atomic.aiml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AIML\aiml\Biography.aiml" />
+    <None Include="AIML\aiml\Bot.aiml" />
+    <None Include="AIML\aiml\Botmaster.aiml" />
+    <None Include="AIML\aiml\Client.aiml" />
+    <None Include="AIML\aiml\Computers.aiml" />
+    <None Include="AIML\aiml\CustomTagTest.aiml" />
+    <None Include="AIML\aiml\Default.aiml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AIML\aiml\Emotion.aiml" />
+    <None Include="AIML\aiml\Food.aiml" />
+    <None Include="AIML\aiml\Geography.aiml" />
+    <None Include="AIML\aiml\History.aiml" />
+    <None Include="AIML\aiml\Inquiry.aiml" />
+    <None Include="AIML\aiml\Interjection.aiml" />
+    <None Include="AIML\aiml\IU.aiml" />
+    <None Include="AIML\aiml\Knowledge.aiml" />
+    <None Include="AIML\aiml\Literature.aiml" />
+    <None Include="AIML\aiml\Money.aiml" />
+    <None Include="AIML\aiml\Movies.aiml" />
+    <None Include="AIML\aiml\Music.aiml" />
+    <None Include="AIML\aiml\Personality.aiml" />
+    <None Include="AIML\aiml\Philosophy.aiml" />
+    <None Include="AIML\aiml\Pickup.aiml" />
+    <None Include="AIML\aiml\Predicates.aiml" />
+    <None Include="AIML\aiml\Reduce.aiml" />
+    <None Include="AIML\aiml\Reductions.aiml" />
+    <None Include="AIML\aiml\Salutations.aiml" />
+    <None Include="AIML\aiml\Science.aiml" />
+    <None Include="AIML\aiml\Stack.aiml" />
+    <None Include="AIML\aiml\Stories.aiml" />
+    <None Include="AIML\aiml\That.aiml" />
+    <None Include="AIML\aiml\WAH_Contacts.aiml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AIML\aiml\WAH_Date.aiml" />
+    <None Include="AIML\aiml\WAH_Interjections.aiml" />
+    <None Include="AIML\aiml\WAH_GetAttributes.aiml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AIML\aiml\WAH_Keywords.aiml" />
+    <None Include="AIML\aiml\WAH_Questions.aiml" />
+    <None Include="AIML\aiml\WAH_Salutations.aiml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AIML\aiml\WAH_Synonyms.aiml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AIML\aiml\WAH_VPN.aiml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="AIML\config\DefaultPredicates.xml" />
+    <Content Include="AIML\config\GenderSubstitutions.xml" />
+    <Content Include="AIML\config\Person2Substitutions.xml" />
+    <Content Include="AIML\config\PersonSubstitutions.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AIML\config\Settings.xml" />
+    <Content Include="AIML\config\Splitters.xml" />
+    <Content Include="AIML\config\Substitutions.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="lib\agsXMPP.dll" />
+    <Content Include="lib\agsXMPP.xml" />
+    <Content Include="lib\AIMLbot.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /I /Y "$(ProjectDir)AIML\aiml" "$(TargetDir)\aiml"
+xcopy /I /Y "$(ProjectDir)AIML\config" "$(TargetDir)\config"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>xcopy /I /Y  "$(TargetDir)\aiml" "$(ProjectDir)AIML\aiml"
+xcopy /I /Y  "$(TargetDir)\config" "$(ProjectDir)AIML\config"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

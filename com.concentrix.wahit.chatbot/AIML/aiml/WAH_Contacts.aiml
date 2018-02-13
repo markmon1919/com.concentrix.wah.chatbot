@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+
+  <!--author: mark.monteros-->
+
+  <!--Name-->
+  <category>
+    <pattern>FIRSTNAME</pattern>
+    <template>
+      It's <get name="firstname" />
+    </template>
+  </category>
+  <category>
+    <pattern>LASTNAME</pattern>
+    <template>
+      <get name="lastname" />
+    </template>
+  </category>
+  <category>
+    <pattern>NAME</pattern>
+    <template>
+      You are <sentence>
+        <get name="firstname" />
+      </sentence><get name="whitespace" /><sentence>
+        <get name="lastname" />
+      </sentence>
+    </template>
+  </category>
+  <category>
+    <pattern>USERNAME</pattern>
+    <template>
+      It's <get name="username" />
+    </template>
+  </category>
+  <!--Work Phone-->
+  <category>
+    <pattern>*</pattern>
+    <that>* your work phone *</that>
+    <template>
+      <think>
+        <set name="worknumber">
+          <star index="1" />
+        </set>
+      </think>How about your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>* IS *</pattern>
+    <that>* your work phone *</that>
+    <template>
+      <think>
+        <set name="worknumber">
+          <star index="1" />
+        </set>
+      </think>How about your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>ITS *</pattern>
+    <that>* your work phone *</that>
+    <template>
+      <think>
+        <set name="worknumber">
+          <star index="1" />
+        </set>
+      </think>How about your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>* ITS *</pattern>
+    <that>* your work phone *</that>
+    <template>
+      <think>
+        <set name="worknumber">
+          <star index="1" />
+        </set>
+      </think>How about your alternate phone number?
+    </template>
+  </category>
+  
+  <!--Incorrect answer Work Phone-->
+  <category>
+    <pattern>*</pattern>
+    <that>You must have *</that>
+    <template>
+      <think>
+        <set name="worknumber">
+          <star index="1" />
+        </set>
+      </think>How about your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>* IS *</pattern>
+    <that>You must have *</that>
+    <template>
+      <think>
+        <set name="worknumber">
+          <star index="1" />
+        </set>
+      </think>How about your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>ITS *</pattern>
+    <that>You must have *</that>
+    <template>
+      <think>
+        <set name="worknumber">
+          <star index="1" />
+        </set>
+      </think>How about your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>* ITS *</pattern>
+    <that>You must have *</that>
+    <template>
+      <think>
+        <set name="worknumber">
+          <star index="1" />
+        </set>
+      </think>How about your alternate phone number?
+    </template>
+  </category>
+  <!--Alternate Phone-->
+  <category>
+    <pattern>*</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      <think>
+        <set name="altnumber">
+          <star index="1" />
+        </set>
+      </think>
+      Thanks. How may I help you <get name="firstname" />?
+    </template>
+  </category>
+  <category>
+    <pattern>* IS *</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      <think>
+        <set name="altnumber">
+          <star index="1" />
+        </set>
+      </think>
+      Thanks. How may I help you <get name="firstname" />?
+    </template>
+  </category>
+  <category>
+    <pattern>ITS *</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      <think>
+        <set name="altnumber">
+          <star index="1" />
+        </set>
+      </think>
+      Thanks. How may I help you <get name="firstname" />?
+    </template>
+  </category>
+  <category>
+    <pattern>* ITS *</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      <think>
+        <set name="altnumber">
+          <star index="1" />
+        </set>
+      </think>
+      Thanks. How may I help you <get name="firstname" />?
+    </template>
+  </category>
+  <!--Incorrect answer Alternate Phone-->
+  <category>
+    <pattern>*</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      <think>
+        <set name="altnumber">
+          <star index="1" />
+        </set>
+      </think>
+      Thanks. How may I help you <get name="firstname" />?
+    </template>
+  </category>
+  <category>
+    <pattern>* IS *</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      <think>
+        <set name="altnumber">
+          <star index="1" />
+        </set>
+      </think>
+      Thanks. How may I help you <get name="firstname" />?
+    </template>
+  </category>
+  <category>
+    <pattern>ITS *</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      <think>
+        <set name="altnumber">
+          <star index="1" />
+        </set>
+      </think>
+      Thanks. How may I help you <get name="firstname" />?
+    </template>
+  </category>
+  <category>
+    <pattern>* ITS *</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      <think>
+        <set name="altnumber">
+          <star index="1" />
+        </set>
+      </think>
+      Thanks. How may I help you <get name="firstname" />?
+    </template>
+  </category>
+  <!--Both Phone numbers-->
+  <category>
+    <pattern>PHONE</pattern>
+    <template>
+      There you go, Work Phone: <get name="worknumber" />. Alternate Phone: <get name="altnumber" />.
+    </template>
+  </category>
+  <category>
+    <pattern>WORK PHONE</pattern>
+    <template>
+      Here is your Work Phone: <get name="worknumber" />.
+    </template>
+  </category>
+  <category>
+    <pattern>ALTERNATE</pattern>
+    <template>
+      Here is your Alternate Phone: <get name="altnumber" />.
+    </template>
+  </category>
+  <!--Email-->
+  <category>
+    <pattern>EMAIL</pattern>
+    <template>
+      Do you mean your Zimbra or Concentrix <set name="topic">email</set>?
+    </template>
+  </category>
+  <!--Concentrix Email-->
+  <topic name="email">
+    <category>
+      <pattern>CNXMAIL</pattern>
+      <template>
+        Your email address is <get name="cnxmail" /> and the password is just the same as your SSO/Zimbra.
+      </template>
+    </category>
+    <!--Zimbra Email-->
+    <category>
+      <pattern>ZIMBRA</pattern>
+      <template>
+        You can login here https://wah-azure.concentrix.com and use these details <get name="username" /><get name="zimbra" />
+      </template>
+    </category>
+  </topic>
+
+</aiml>

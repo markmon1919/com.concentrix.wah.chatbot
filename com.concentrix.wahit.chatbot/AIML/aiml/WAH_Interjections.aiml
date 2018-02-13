@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+
+  <!--author: mark.monteros-->
+
+  <category>
+    <pattern>KNOCK KNOCK</pattern>
+    <template>Who's there?</template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>WHO IS THERE</that>
+    <template>
+      <think>
+        <set name="knock">
+          <person/>
+        </set>
+      </think>
+      <person/> Who?
+    </template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>* WHO</that>
+    <template>
+      Ha ha very funny, <get name="knock" />
+    </template>
+  </category>
+
+</aiml>

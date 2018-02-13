@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+
+
+  <category>
+    <pattern>BYE</pattern>
+    <template>
+      <random>
+        <li>Goodbye </li>
+        <li>Ciao </li>
+        <li>Bye </li>
+        <li>Adios </li>
+        <li>Bye bye </li>
+        <li>Sayonara </li>
+        <li>Bye for now </li>
+      </random>
+        <get name="firstname" />.
+      <random>
+        <li> Have a good one</li>
+        <li> Have a good day!</li>
+        <li> See you next time!</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>BYE *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BYE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BYE *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>HELLO</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HELLO *</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HELLO</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HELLO *</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HI</pattern>
+    <template>
+      <random>
+        <li>Hi there <get name="firstname" />! My name is </li>
+        <li>Hello <get name="firstname" />! My name is </li>
+        <li>Good day <get name="firstname" />! My name is </li>
+        <li>Hi <get name="firstname" />! I am </li>
+        <li>Hello there <get name="firstname" />! I'm </li>
+      </random>Ashley. Before we start, can I have your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>* HI</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HI *</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HI *</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ADIEU</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ADIOS</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ADIOS *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CIAO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ALLO</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ALOHA</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ALOH</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ANYBODY HOME</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AUREVOIR</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BONJOUR MEANS HELLO</pattern>
+    <template>Well hello there!</template>
+  </category>
+  <category>
+    <pattern>BONJOUR</pattern>
+    <template>Does BONJOUR mean hello or goodbye?</template>
+  </category>
+  <category>
+    <pattern>BUHBYE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BY BY</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BYE BYE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BYE BYE *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BYEBYE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BYEBYE *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CHEERS</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>C YA</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CYA *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DISCONNECT ME</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>END</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXIT</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FAREWELL</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FAREWELL *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>G2G</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GET LOST</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GO HOME</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOOD BYE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOOD BYE *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOODBYE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOODBYE *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOODBYE</pattern>
+    <that>SEE YOU LATER</that>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOOD BY</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOODBY</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOOD DAY</pattern>
+    <template>
+      <srai>HELLO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOOD EVENING</pattern>
+    <template>
+      <random>
+        <li>Good Evening <get name="firstname" />! I'm </li>
+      </random>Ashley. Before we start, can I have your work phone number?
+    </template>
+  </category>
+    <category>
+    <pattern>GOOD DAY</pattern>
+    <template>
+      <random>
+        <li>Good Day <get name="firstname" />! I'm </li>
+      </random>Ashley. Before we start, can I have your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>GOOD NITE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOTTA GO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOTTA GO *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOT TO GO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GOT TO GO *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GREETINGS *</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GTG</pattern>
+    <template>
+      <srai>BYE </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HALO</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HASTA LA VISTA</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HASTA LUEGO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HASTA *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HAVE A GOOD NIGHT</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HAVE TO GO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HELLOW</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HELOO *</pattern>
+    <template>
+      <srai>
+        HI <star/>
+      </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HELO</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HEY THERE</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HI THERE *</pattern>
+    <template>
+      <sr/>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HIYA</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOI</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOWDIE *</pattern>
+    <template>
+      <srai>HI</srai>
+      <sr/>
+    </template>
+  </category>
+  <category>
+    <pattern>HOWDY</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HULLO</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I BETTER GO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I DO NOT WANT TO TALK *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I G2G</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I GOING</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I GO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I GOTTA GO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I GOT TO GO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I G TWO G</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I LEAVE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I LEAVING</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I LEFT</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I MUST BE GOING *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I MUST GO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I MUST GO *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I MUST LEAVE *</pattern>
+    <template>
+      <srai>BYE</srai>
+      <sr/>
+    </template>
+  </category>
+  <category>
+    <pattern>I MUST LEAVE</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I NEED TO GO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I QUIT</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I RESIGN</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS ANYONE THERE</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IT MEANS HELLO</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I WANT TO LEAVE</pattern>
+    <template>Ok, bye bye.</template>
+  </category>
+  <category>
+    <pattern>I WILL SEE YOU LATER</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I WILL TALK TO YOU LATER</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I WILL TALK TO YOU LATER *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>KONNICHI WA</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>KONNICHIWA</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LEAVE *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MOOSHI MOOSHI</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NIGHTY *</pattern>
+    <template>
+      <srai>BYE </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OLA</pattern>
+    <template>
+      <srai>HI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SAYONARA</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SEE YOU LATER</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SEE YOU</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SEE YOU *</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SEE YOU SOON</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TALK TO YOU LATER</pattern>
+    <template>
+      <srai>BYE </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TA TA</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TIME TO GO</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TTYL</pattern>
+    <template>
+      <srai>BYE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YOU ARE WELCOME *</pattern>
+    <template>It was my pleasure.</template>
+  </category>
+  <category>
+    <pattern>YOU ARE WELCOME</pattern>
+    <template>
+      <random>
+        <li>The pleasure was all mine.</li>
+        <li>Don't mention it.</li>
+        <li>Polite people are nice.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>YOUR WELCOME</pattern>
+    <template>I think you mean "you are welcome".</template>
+  </category>
+  <category>
+    <pattern>YOUR WELCOME *</pattern>
+    <template>
+      <srai>YOU ARE WELCOME</srai>
+    </template>
+  </category>
+
+</aiml>

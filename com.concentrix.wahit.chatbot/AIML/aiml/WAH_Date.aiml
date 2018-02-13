@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+
+<aiml>
+
+  <!--author: mark.monteros-->
+  
+  <category>
+    <pattern>DATE</pattern>
+    <template>
+      Today is
+      <date format="%A"/>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DATE *</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DATE</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DATE *</pattern>
+    <template>
+      <srai>DATE</srai>
+    </template>
+  </category>
+  
+
+</aiml>

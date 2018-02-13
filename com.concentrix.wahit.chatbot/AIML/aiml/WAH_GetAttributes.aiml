@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<aiml>
+
+  <!--author: mark.monteros-->
+
+  <category>
+    <pattern>GET ATTRIBUTES</pattern>
+    <template>
+      « ATTRIBUTES »
+      Full name: <get name="firstname"/><get name="whitespace"/><get name="lastname"/>
+      First name: <get name="firstname"/>
+      Last name: <get name="lastname"/>
+      Username: <get name="username"/>
+      Work phone: <get name="worknumber"/>
+      Alternate phone: <get name="altnumber"/>
+      CNX email: <get name="cnxmail" />
+      Zimbra email: <get name="username" /><get name="zimbra" />
+      Issue: <formal><get name="topic"/></formal>
+
+    </template>
+  </category>
+
+  <category>
+    <pattern>SET ATTRIBUTES</pattern>
+    <template>
+      <srai>
+        SET ATTRIBUTES <get name="meta"/>
+      </srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>SET ATTRIBUTES *</pattern>
+    <template>
+      The meta Predicate is set.
+    </template>
+  </category>
+  <category>
+    <pattern>SET ATTRIBUTES OM</pattern>
+    <template>
+      <think>
+        <set name="age">how many</set>
+        <set name="heard">where</set>
+        <set name="he">he</set>
+        <set name="her">her</set>
+        <set name="him">him</set>
+        <set name="is">a client</set>
+        <set name="it">it</set>
+        <set name="job">your job</set>
+        <set name="like">to chat</set>
+        <set name="looklike">a person</set>
+        <set name="memory">nothing</set>
+        <set name="meta">set</set>
+        <set name="name">judge</set>
+        <set name="personality">average</set>
+        <set name="she">she</set>
+        <set name="sign">your starsign</set>
+        <set name="them">them</set>
+        <set name="they">they</set>
+        <set name="thought">nothing</set>
+        <set name="want">to talk to me</set>
+        <set name="we">we</set>
+      </think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CLIENT PROPERTIES</pattern>
+    <template>
+      <srai>GET ATTRIBUTES</srai>
+    </template>
+  </category>
+
+</aiml>

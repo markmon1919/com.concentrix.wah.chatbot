@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<aiml>
+ 
+  <!--KEYWORDS-->
+  
+  <!--Issue-->
+
+  
+  <!--VPN-->
+  <category>
+    <pattern>VPN</pattern>
+    <template>What is the issue with your <set name="topic">VPN</set>?</template>
+  </category>
+  <category>
+    <pattern>_ VPN *</pattern>
+    <template>
+      <srai>VPN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ VPN</pattern>
+    <template>
+      <srai>VPN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VPN *</pattern>
+    <template>
+      <srai>VPN</srai>
+    </template>
+  </category>
+  
+  
+  <!--Issue Type-->
+  <category>
+    <pattern># VPN * *</pattern>
+    <think>
+      <set name="topic">
+        <star index="1" />
+      </set>
+    </think>
+    <template>
+      <condition name="topic">
+        <li value="email">
+          Sure! what email? Is it Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Sure I will! What is the issue with your <set name="topic">VPN</set>?
+        </li>
+      </condition>
+    </template>
+  </category>
+
+  <!-- Remote Gateways -->
+  <category>
+    <pattern>GREENVILLE</pattern>
+    <template>
+      It's 216.85.164.129 or https://wah20101647.concentrix.com
+    </template>
+  </category>
+  <category>
+    <pattern>PHOENIX</pattern>
+    <template>
+      It's 209.136.238.37...
+    </template>
+  </category>
+  <category>
+    <pattern>INTUIT</pattern>
+    <template>
+      It's https://wah0941.concentrix.com
+    </template>
+  </category>
+
+</aiml>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+
+  <!--VPN Topic-->
+  <topic name="VPN">
+    <category>
+      <pattern>_ VPN * _</pattern>
+      <template>
+        <think>
+          <set name="topic">
+            <star index ="1" />
+          </set>
+        </think>
+        <condition name="topic">
+          <li value="connect">
+            Please verify your username, it should be <get name="username" /> and the password should be the same as your SSO/Zimbra. Can you login now?
+          </li>
+          <li value="dropping">
+            "GO TO DROPPING TOPIC"
+          </li>
+          <li value="slow">
+            "GO TO SLOW CONNECTION TOPIC"
+          </li>
+        </condition>
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ LOGIN</pattern> 
+      <template>
+        <think>
+          <set name="topic">connect
+          </set>
+        </think>
+            Please verify your username, it should be <get name="username" /> and the password should be the same as your SSO/Zimbra. Can you login now?
+      </template>
+    </category>
+
+    <category>
+      <pattern>_ LOGIN *</pattern> 
+      <template>
+        <think>
+          <set name="topic">connect
+          </set>
+        </think>
+            Please verify your username, it should be <get name="username" /> and the password should be the same as your SSO/Zimbra. Can you login now?
+      </template>
+    </category>
+
+    <category>
+      <pattern>DROPPING</pattern> 
+      <template>
+        <think>
+          <set name="topic">dropping
+          </set>
+        </think>
+		Go to dropping topic
+      </template>
+    </category>
+    <category>
+      <pattern>_ DROPPING</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+	</template>
+    </category>
+    <category>
+      <pattern>DROPPING _</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+	</template>
+    </category>
+    <category>
+      <pattern>_ DROPS _</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+		</template>
+    </category>
+    <category>
+      <pattern>_ DROPS</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+		</template>
+    </category>
+    <category>
+      <pattern>DROPS _</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+		</template>
+    </category>
+    <category>
+      <pattern>_ DISCONNECTS _</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+		</template>
+    </category>
+    <category>
+      <pattern>_ DISCONNECTS</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+		</template>
+    </category>
+   
+    <category>
+      <pattern>DISCONNECTS _</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+		</template>
+    </category>
+    <category>
+      <pattern>_ DISCONNECTING _</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+		</template>
+    </category>
+    <category>
+      <pattern>_ DISCONNECTS</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+		</template>
+    </category>
+    <category>
+      <pattern>DISCONNECTS _</pattern> 
+      <template>
+	<srai>DROPPING</srai>
+		</template>
+    </category>
+
+
+    <category>
+      <pattern># INSUFFICIENT CREDENTIALS</pattern> 
+      <template>
+        <think>
+          <set name="topic">connect</set>
+        </think>
+            Please verify your username, it should be <get name="username" /> and the password should be the same as your SSO/Zimbra. Can you login now?
+      </template>
+    </category>
+
+    <category>
+      <pattern>YES</pattern>
+      <that>What is your *</that>
+      <template>What is the issue with your VPN?</template>
+    </category>
+    <category>
+      <pattern>_ YES _</pattern>
+      <template>
+        <srai>YES</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>YES _</pattern>
+      <template>
+        <srai>YES</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>_ YES</pattern>
+      <template>
+        <srai>YES</srai>
+      </template>
+    </category>
+        <category>
+      <pattern>NO</pattern>
+      <that>What is your *</that>
+      <template>
+        <random><li>Is it on the <set name="topic">AppleConnect</set>?</li>
+      <li>Is it on the <set name="topic">iLog</set>?</li>
+      </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>* _</pattern>
+      <that>What is the *</that>
+      <template>
+        <think>
+          <set name="topic">
+            <star index="1"></star>
+          </set>
+        </think>
+        <condition name="topic">
+          <li value="connect">
+            Please verify your username, it should be <get name="username" /> and the password should be the same as your SSO/Zimbra. Can you login now?
+          </li>
+          <li value="dropping">
+            "GO TO DROPPING TOPIC"
+          </li>
+          <li value="slow">
+            "GO TO SLOW CONNECTION TOPIC"
+          </li>
+        </condition>
+      </template>
+    </category>
+
+  </topic>
+
+  <!--can't connect to VPN -->
+  <topic name="connect">
+
+    <category>
+      <pattern>YES</pattern>
+      <that>Please verify your *</that>
+      <template>
+        Great job <get name="firstname" />!
+      </template>
+    </category>
+    <category>
+      <pattern>_ YES _</pattern>
+      <template>
+        <srai>YES</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>_ YES</pattern>
+      <template>
+        <srai>YES</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>YES _</pattern>
+      <template>
+        <srai>YES</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>NO</pattern>
+      <that>Please verify your *</that>
+      <template>
+        Please double check your Remote Gateway. For Greenville it's 216.85.164.129 or https://wah20101647.concentrix.com, for Phoenix it's 209.136.238.37 and for Intuit it's https://wah0941.concentrix.com.. Is your configuration correct?
+      </template>
+    </category>
+    <category>
+      <pattern>_ NO _</pattern>
+      <template>
+        <srai>NO</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>_ NO</pattern>
+      <that>Please verify your *</that>
+      <template>
+        <srai>NO</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>NO _</pattern>
+      <that>Please verify your *</that>
+      <template>
+        <srai>NO</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>YES</pattern>
+      <that>Please double check *</that>
+      <template>
+        Great job <get name="firstname" />!
+      </template>
+    </category>
+    <category>
+      <pattern>* YES *</pattern>
+      <that>Please double check *</that>
+      <template>
+        <srai>YES</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>* YES</pattern>
+      <that>Please double check *</that>
+      <template>
+        <srai>YES</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>YES *</pattern>
+      <that>Please double check *</that>
+      <template>
+        <srai>YES</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>NO</pattern>
+      <that>Please double check *</that>
+      <template>
+        Kindly open Keychain Access in Applications folder and click Certificates. Do you see <get name="fullname"/>?
+      </template>
+    </category>
+    <category>
+      <pattern>* NO *</pattern>
+      <that>Please double check *</that>
+      <template>
+        <srai>NO</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>* NO</pattern>
+      <that>Please double check *</that>
+      <template>
+        <srai>NO</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>NO *</pattern>
+      <that>Please double check *</that>
+      <template>
+        <srai>NO</srai>
+      </template>
+    </category>
+
+  </topic>
+
+
+
+
+  <!-- VPN Dropping  -->
+  <topic name="dropping">
+<category><pattern>*</pattern>
+<that>Go to dropping topic</that>
+<template>This is VPN dropping topic</template>
+</category>
+
+  </topic>
+
+
+  <!-- VPN slow connection -->
+  <topic name="slow">
+
+
+  </topic>
+
+
+  <!-- SSL certificate -->
+
+</aiml>

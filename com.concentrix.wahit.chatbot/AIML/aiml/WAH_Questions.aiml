@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<aiml>
+
+  <!--author: mark.monteros-->
+
+  <!-- Info Questions -->
+  <category>
+    <pattern>WHAT *</pattern>
+    <template>
+      <srai>
+        <star />
+      </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT * MY *</pattern>
+    <template>
+      <srai>
+        <star />
+      </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO YOU KNOW *</pattern>
+    <template>
+      <srai>
+        <star />
+      </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DO YOU KNOW THE *</pattern>
+    <template>
+      <srai>
+        <star />
+      </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHO * I</pattern>
+    <template>
+      <srai>GET ATTRIBUTES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHO * AM</pattern>
+    <template>
+      <srai>GET ATTRIBUTES</srai>
+    </template>
+  </category>
+
+  <!-- Invalid Answers -->
+  <!-- Work Phone -->
+  <category>
+    <pattern>I * HAVE</pattern>
+    <that>* your work phone *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * HAVE</pattern>
+    <that>You must have *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * KNOW</pattern>
+    <that>* your work phone *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * KNOW</pattern>
+    <that>You must have *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * NO *</pattern>
+    <that>* your work phone *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * NO *</pattern>
+    <that>You must have *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * PHONE</pattern>
+    <that>* your work phone *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * PHONE</pattern>
+    <that>You must have *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * PHONE *</pattern>
+    <that>* your work phone *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * PHONE *</pattern>
+    <that>You must have *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * WORK PHONE</pattern>
+    <that>* your work phone *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * WORK PHONE</pattern>
+    <that>You must have *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * WORK PHONE *</pattern>
+    <that>* your work phone *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * WORK PHONE *</pattern>
+    <that>You must have *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * NUMBER</pattern>
+    <that>* your work phone *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * NUMBER</pattern>
+    <that>You must have *</that>
+    <template>
+      You must have one. It's a requirement. Can you tell me again your work phone number?
+    </template>
+  </category>
+
+  <!-- Alternate Phone -->
+  <category>
+    <pattern>I * HAVE</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * HAVE</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * KNOW</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * KNOW</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * NO *</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * NO *</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * ALTERNATE PHONE</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * ALTERNATE PHONE</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * ALTERNATE PHONE *</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * ALTERNATE PHONE *</pattern>
+    <that> Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * CELL PHONE</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * CELL PHONE</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * CELL PHONE *</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * CELL PHONE *</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * CELLPHONE</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * CELLPHONE</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * CELLPHONE *</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * CELLPHONE *</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * MOBILE PHONE</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * MOBILE PHONE</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * MOBILE PHONE *</pattern>
+    <that>* your alternate phone *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * MOBILE PHONE *</pattern>
+    <that>Atleast you should *</that>
+    <template>
+      Atleast you should have one. Can you tell me again your alternate phone number?
+    </template>
+  </category>
+
+  <!-- Set Topic for Issue Questions -->
+<!--
+  <category>
+    <pattern>* ISSUES</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * * ISSUES</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUES WITH *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUES WITH THE *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUES WITH MY *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUES ON *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUES ON THE *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUES ON MY *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUE WITH *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUE WITH MY *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUE WITH THE *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUE ON MY *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUE ON *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * ISSUE ON THE *</pattern>
+    <template>
+      What is the issue with your <set name="topic">
+        <star index="1" />
+      </set>?
+    </template>
+  </category>
+  <category>
+    <pattern>I * CONNECT TO *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Do you mean your Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Please verify your username, it should be <get name="username" /> and the password is just the same as your SSO/Zimbra. Is it running?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>I * LOGIN TO *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Do you mean your Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Please verify your username, it should be <get name="username" /> and the password is just the same as your SSO/Zimbra. Is it running?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>I * LOG IN TO *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Do you mean your Zimbra or Concentrix <set name="topic1">email</set>?
+        </li>
+        <li value="VPN">
+          Please verify your username, it should be <get name="username" /> and the password is just the same as your SSO/Zimbra. Is it running?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>I * SIGN IN TO *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Do you mean your Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Please verify your username, it should be <get name="username" /> and the password is just the same as your SSO/Zimbra. Is it running?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>I * SIGN-IN TO *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Do you mean your Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          <think><set name="topic">VPN</set></think>
+          Please verify your username, it should be <get name="username" /> and the password is just the same as your SSO/Zimbra. Is it running?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>* YOU HELP ME WITH *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Sure! what email? Is it Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Sure I will! What is the issue with your <set name="topic">VPN</set>?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>* YOU HELP ME WITH MY *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Sure! what email? Is it Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Sure I will! What is the issue with your <set name="topic">VPN</set>?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>* YOU HELP ME WITH THE *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Sure! what email? Is it Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Sure I will! What is the issue with your <set name="topic">VPN</set>?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>HELP ME WITH *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Sure! what email? Is it Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Sure I will! What is the issue with your <set name="topic">VPN</set>?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>* HELP ME WITH *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Sure! what email? Is it Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Sure I will! What is the issue with your <set name="topic">VPN</set>?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>HELP ME WITH THE *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Sure! what email? Is it Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Sure I will! What is the issue with your <set name="topic">VPN</set>?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>* HELP ME WITH THE *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Sure! what email? Is it Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Sure I will! What is the issue with your <set name="topic">VPN</set>?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>HELP ME WITH MY *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Sure! what email? Is it Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Sure I will! What is the issue with your <set name="topic">VPN</set>?
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>* HELP ME WITH MY *</pattern>
+    <template>
+      <think>
+        <set name="topic">
+          <star index="1" />
+        </set>
+      </think>
+      <condition name="topic">
+        <li value="email">
+          Sure! what email? Is it Zimbra or Concentrix <set name="topic">email</set>?
+        </li>
+        <li value="VPN">
+          Sure I will! What is the issue with your <set name="topic">VPN</set>?
+        </li>
+      </condition>
+    </template>
+  </category>
+-->
+</aiml>
